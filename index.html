@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>synv3x - Cybersecurity Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Access Gate -->
+    <div id="gate">
+        <div class="gate-grid"></div>
+        <div class="gate-inner">
+            <div class="gate-emblem">
+                <img src="profile.png" alt="synv3x">
+            </div>
+            <div class="gate-logo">SYNV3X</div>
+            <div class="gate-sub">Secure Access Terminal</div>
+            <div class="gate-bar"><span id="gate-bar"></span></div>
+            <div class="gate-status" id="gate-status">Initializing secure link</div>
+            <button class="gate-enter" id="gate-enter" disabled>
+                <span class="gate-enter-label">Enter</span>
+                <span class="gate-enter-arrow">→</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="aurora"></div>
+    <canvas id="particleCanvas"></canvas>
+    <canvas id="networkCanvas"></canvas>
+    <div id="cursor-ring"></div>
+    <div id="cursor-dot"></div>
+    <div id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>synv3x</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-copy">
+            <div class="terminal-intro">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-btn close"></span>
+                        <span class="terminal-btn minimize"></span>
+                        <span class="terminal-btn maximize"></span>
+                    </div>
+                    <div class="terminal-content" id="terminal-body"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title glitch" data-text="SYNV3X">SYNV3X</h1>
+                <p class="hero-subtitle">Cybersecurity Learner</p>
+                <p class="hero-description">Building skills in systems security, networking fundamentals, and offensive security through hands-on labs and technical growth.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('about')">About Me</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">Contact</button>
+                </div>
+                <div class="hero-status">
+                    <span class="status-dot"></span>
+                    <span>Available for opportunities</span>
+                </div>
+                <div class="hero-hint">
+                    <span>type </span><kbd class="hint-kbd">whoami</kbd><span> to scan profile</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-panel">
+            <div class="hero-card">
+                <div class="hero-avatar-ring">
+                    <div class="hero-avatar"></div>
+                    <span class="hero-avatar-online" title="Online"></span>
+                </div>
+                <div class="hero-id">
+                    <span class="hero-id-handle">synv3x</span>
+                    <span class="hero-id-role">Cybersecurity Learner · Toronto, CA</span>
+                </div>
+                <div class="hero-card-copy">
+                    <p>Systems-savvy and security-focused — sharpening practical skills across Linux, networking, and offensive/defensive security through hands-on labs.</p>
+                    <div class="hero-card-meta">
+                        <span>🐧 Linux native</span>
+                        <span>🧪 Hands-on labs</span>
+                        <span>🛡️ Blue + red team</span>
+                        <span>📡 Network defense</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title reveal" data-num="01"><span class="neon">About</span> Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro reveal-left">
+                        I'm a <span class="neon-text">Cybersecurity learner</span> focused on building core technical skills in systems, networking, and security fundamentals.
+                    </p>
+                    <p class="reveal-left">
+                        Currently learning through hands-on labs and coursework in Linux, Windows, networking protocols, and programming. I'm building a foundation in cybersecurity with practical experience and continuous learning.
+                    </p>
+                    <p class="reveal-left">
+                        <strong>Current Focus:</strong> Linux & Windows systems, TCP/IP networking, system administration, and security fundamentals.
+                    </p>
+                    <p class="reveal-left">
+                        <strong>Interests:</strong> Cybersecurity, technology, continuous learning, and professional development.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card reveal">
+                        <div class="stat-number" data-suffix="+">2</div>
+                        <div class="stat-label">Years Learning</div>
+                    </div>
+                    <div class="stat-card reveal">
+                        <div class="stat-number" data-suffix="+">5</div>
+                        <div class="stat-label">Projects Built</div>
+                    </div>
+                    <div class="stat-card reveal">
+                        <div class="stat-number" data-suffix="+">12</div>
+                        <div class="stat-label">Tools & Tech</div>
+                    </div>
+                    <div class="stat-card reveal">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Never Stop Learning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title reveal" data-num="02"><span class="neon">Technical</span> Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Networking</h3>
+                    <p>TCP/IP, DNS, DHCP, VLANs, subnetting, firewalls, Active Directory</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon">💻</div>
+                    <h3>Systems</h3>
+                    <p>Windows 10/11, Linux administration, Virtualization (VMware, VirtualBox)</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon">🔐</div>
+                    <h3>Cybersecurity</h3>
+                    <p>SIEM fundamentals, threat detection, network defense, vulnerability assessment</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Hardware</h3>
+                    <p>Workstation assembly, Raspberry Pi, Arduino, microcontrollers</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon">💾</div>
+                    <h3>Programming</h3>
+                    <p>Python, C#, C, C++, Bash scripting</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Tools</h3>
+                    <p>Wireshark, Nmap, Security Onion, GitHub, VS Code, airmon-ng</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toolbox Section -->
+    <section id="toolbox" class="section toolbox-section">
+        <div class="container">
+            <h2 class="section-title reveal" data-num="03"><span class="neon">My</span> Toolbox</h2>
+            <p class="section-sub reveal">The languages, platforms, and tools I work with hands-on.</p>
+            <div class="toolbox-grid">
+                <div class="toolbox-group reveal-left">
+                    <div class="toolbox-head"><span class="toolbox-ico">💾</span><h4>Languages</h4></div>
+                    <div class="chip-row">
+                        <span class="chip">Python</span>
+                        <span class="chip">C</span>
+                        <span class="chip">C++</span>
+                        <span class="chip">C#</span>
+                        <span class="chip">Bash</span>
+                    </div>
+                </div>
+                <div class="toolbox-group reveal-left">
+                    <div class="toolbox-head"><span class="toolbox-ico">🔐</span><h4>Security &amp; Analysis</h4></div>
+                    <div class="chip-row">
+                        <span class="chip">Wireshark</span>
+                        <span class="chip">Nmap</span>
+                        <span class="chip">Security Onion</span>
+                        <span class="chip">Kibana</span>
+                        <span class="chip">Empire3</span>
+                        <span class="chip">airmon-ng</span>
+                    </div>
+                </div>
+                <div class="toolbox-group reveal-left">
+                    <div class="toolbox-head"><span class="toolbox-ico">🖥️</span><h4>Systems &amp; Infra</h4></div>
+                    <div class="chip-row">
+                        <span class="chip">Linux</span>
+                        <span class="chip">Windows</span>
+                        <span class="chip">VMware</span>
+                        <span class="chip">VirtualBox</span>
+                        <span class="chip">BIND9</span>
+                        <span class="chip">Samba / NFS</span>
+                        <span class="chip">Active Directory</span>
+                    </div>
+                </div>
+                <div class="toolbox-group reveal-left">
+                    <div class="toolbox-head"><span class="toolbox-ico">⚙️</span><h4>Hardware &amp; Dev</h4></div>
+                    <div class="chip-row">
+                        <span class="chip">Raspberry Pi</span>
+                        <span class="chip">ESP32</span>
+                        <span class="chip">Arduino</span>
+                        <span class="chip">Git &amp; GitHub</span>
+                        <span class="chip">VS Code</span>
+                        <span class="chip">Jupyter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title reveal" data-num="04"><span class="neon">Featured</span> Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <h3>Network Infrastructure Lab</h3>
+                    <p>Configured DNS (BIND9), DHCP, Apache, Samba, NFS, and firewall rules on Linux server/client environment. Set up forward/reverse DNS zones and resolved multi-service connectivity.</p>
+                    <div class="project-tags">
+                        <span class="tag">Linux</span>
+                        <span class="tag">Networking</span>
+                        <span class="tag">DNS/DHCP</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <h3>Cybersecurity Capstone</h3>
+                    <p>Executed full attack-defense simulation using Empire3 C2 framework against Windows VM. Detected and analyzed compromise indicators using Security Onion SIEM and Kibana.</p>
+                    <div class="project-tags">
+                        <span class="tag">C2 Framework</span>
+                        <span class="tag">SIEM</span>
+                        <span class="tag">Threat Detection</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <h3>Raspberry Pi Lab Environment</h3>
+                    <p>Deployed headless Raspberry Pi 4 with SSH, static IP configuration, Jupyter Notebooks, and Python automation scripts for testing and development.</p>
+                    <div class="project-tags">
+                        <span class="tag">Raspberry Pi</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <h3>ESP32 Peer-to-Peer Messaging</h3>
+                    <p>Built wireless communication system using ESP-NOW protocol and OLED displays. Performed soldering and firmware flashing for embedded wireless device.</p>
+                    <div class="project-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">Wireless</span>
+                        <span class="tag">Embedded Systems</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <h3>Endpoint Security & Virtualization</h3>
+                    <p>Managed multiple VMs for sandbox testing. Applied BitLocker, Windows Defender policies, and system hardening techniques for endpoint protection.</p>
+                    <div class="project-tags">
+                        <span class="tag">Virtualization</span>
+                        <span class="tag">Endpoint Security</span>
+                        <span class="tag">Hardening</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="section roadmap-section">
+        <div class="container">
+            <h2 class="section-title reveal" data-num="05"><span class="neon">The</span> Roadmap</h2>
+            <p class="section-sub reveal">Where I started, what I'm building now, and where I'm headed.</p>
+            <div class="timeline">
+                <div class="tl-item reveal-left">
+                    <div class="tl-marker"></div>
+                    <div class="tl-card">
+                        <span class="tl-phase">Foundations</span>
+                        <h3>Systems &amp; Networking</h3>
+                        <p>Linux &amp; Windows administration, TCP/IP, DNS/DHCP, subnetting, virtualization, and scripting — laying the groundwork.</p>
+                    </div>
+                </div>
+                <div class="tl-item reveal-left">
+                    <div class="tl-marker tl-marker-now"></div>
+                    <div class="tl-card">
+                        <span class="tl-phase tl-phase-now">Now</span>
+                        <h3>Hands-on Security</h3>
+                        <p>Building and breaking lab environments — SIEM analysis in Security Onion, C2 attack/defense simulations, packet analysis, and guided lab challenges.</p>
+                    </div>
+                </div>
+                <div class="tl-item reveal-left">
+                    <div class="tl-marker"></div>
+                    <div class="tl-card">
+                        <span class="tl-phase">Next</span>
+                        <h3>Certifications &amp; Depth</h3>
+                        <p>Working toward industry fundamentals on the Network+ / Security+ track and deepening offensive-security and detection skills.</p>
+                    </div>
+                </div>
+                <div class="tl-item reveal-left">
+                    <div class="tl-marker tl-marker-goal"></div>
+                    <div class="tl-card">
+                        <span class="tl-phase tl-phase-goal">Goal</span>
+                        <h3>Security Analyst → Penetration Tester</h3>
+                        <p>Turning curiosity into a career — SOC analysis and penetration testing, with vulnerability research on the horizon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title reveal" data-num="06"><span class="neon">Get In</span> Touch</h2>
+            <div class="contact-content">
+                <p class="contact-intro reveal-scale">Let's connect and build something amazing together</p>
+                <div class="contact-links">
+                    <a href="https://github.com/synv3x" class="contact-link reveal-scale" target="_blank">
+                        <span class="icon">🐙</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://discord.com/users/synv3x" class="contact-link reveal-scale" target="_blank">
+                        <span class="icon">💬</span>
+                        <span>Discord: synv3x</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>synv3x © 2026 | Cybersecurity Learner</p>
+    </footer>
+
+    <!-- Profile Popup -->
+    <div id="profile-popup" class="popup-overlay">
+        <div class="popup-terminal">
+            <div class="popup-header">
+                <div class="popup-btns">
+                    <span class="terminal-btn close" onclick="closePopup()"></span>
+                    <span class="terminal-btn minimize"></span>
+                    <span class="terminal-btn maximize"></span>
+                </div>
+                <span class="popup-title-bar">profile.sh — synv3x</span>
+            </div>
+            <div class="popup-body" id="popup-body"></div>
+            <div class="popup-footer">
+                <span>press <kbd>ESC</kbd> to close &nbsp;·&nbsp; <kbd>I</kbd> to toggle</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating profile trigger -->
+    <button class="profile-trigger" onclick="openPopup()" title="View Profile [I]">
+        <span class="profile-trigger-icon">$</span>
+        <span>whoami</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
